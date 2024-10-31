@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "../Css/NavBar.css";
+
 const navLinkStyle = ({ isActive }) => {
   return {
     color: isActive ? "green" : "black",
@@ -11,13 +12,21 @@ const navLinkStyle = ({ isActive }) => {
 };
 
 const NavBar = () => {
+  const navCollapseRef = useRef(null);
+
+  const handleNavLinkClick = () => {
+    if (navCollapseRef.current && navCollapseRef.current.classList.contains("show")) {
+      navCollapseRef.current.classList.remove("show");
+    }
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <div className="image">
-         <img src={require('../Assests/nouman.png')} alt="Nouman"  />
-         </div>
+          <div className="imageLogo">
+            <img src={require('../Assests/nouman.png')} alt="Nouman" />
+          </div>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,36 +38,45 @@ const NavBar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse" id="navbarNav" ref={navCollapseRef}>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink 
-                  style={navLinkStyle} 
-                  className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}                  to={"/"}>
+                <NavLink
+                  style={navLinkStyle}
+                  className="nav-link"
+                  to="/"
+                  onClick={handleNavLinkClick}
+                >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink 
-                  style={navLinkStyle} 
-                  className="nav-link" 
-                  to={"/about"}>
+                <NavLink
+                  style={navLinkStyle}
+                  className="nav-link"
+                  to="/about"
+                  onClick={handleNavLinkClick}
+                >
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink 
-                  style={navLinkStyle} 
-                  className="nav-link" 
-                  to={"/projects"}>
+                <NavLink
+                  style={navLinkStyle}
+                  className="nav-link"
+                  to="/projects"
+                  onClick={handleNavLinkClick}
+                >
                   Projects
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink 
-                  style={navLinkStyle} 
-                  className="nav-link" 
-                  to={"/contact"}>
+                <NavLink
+                  style={navLinkStyle}
+                  className="nav-link"
+                  to="/contact"
+                  onClick={handleNavLinkClick}
+                >
                   Contact
                 </NavLink>
               </li>
