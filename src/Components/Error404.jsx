@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; 
-import '../Css/Error404.css'; 
+import Error404Css from '../Css/Error404.module.css'; 
 const Error404 = () => {
   const navigate = useNavigate(); 
 
@@ -9,14 +9,14 @@ const Error404 = () => {
   };
 
   return (
-    <div className="error-container">
-      <div className="error-box">
-        <h1 className="error-title">404</h1>
-        <p className="error-message">Oops! Page not found.</p>
-        <p className="error-description">The page you are looking for does not exist.</p>
-        <p className="error-description">You have entered the wrong URL.</p>
+    <div className={Error404Css.errorContainer}>
+      <div className={Error404Css.errorBox}>
+        <h1 className={Error404Css.errorTitle}>404</h1>
+        <p className={Error404Css.errorMessage}>Oops! Page not found.</p>
+        <p className={Error404Css.errorDescription}>The page you are looking for does not exist.</p>
+        <p className={Error404Css.errorDescription}>You have entered the wrong URL.</p>
         <p>If you have any query, contact Nouman Khan.</p>
-        <button onClick={handleGoBack} className="error-link">Go back</button>
+        <button onClick={handleGoBack} className={Error404Css.errorLink}>Go back</button>
       </div>
     </div>
   );

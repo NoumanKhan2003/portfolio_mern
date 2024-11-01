@@ -1,4 +1,4 @@
-.error-container {
+.errorContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     margin-top: 2rem;
   }
   
-  .error-box {
+  .errorBox {
     text-align: center;
     padding: 2rem;
     border: 1px solid #dee2e6; 
@@ -17,26 +17,26 @@
     width: 90%; 
     transition: transform 0.3s;
   }
-  .error-box:hover{
+  .errorBox:hover{
     transform: scale(0.9);
   }
-  .error-title {
+  .errorTitle {
     font-size: 5rem; 
     color: #dc3545; 
     margin: 0; 
   }
   
-  .error-message {
+  .errorMessage {
     font-size: 1.5rem; 
     margin: 1rem 0; 
   }
   
-  .error-description {
+  .errorDescription {
     font-size: 1rem; 
     color: #6c757d; 
   }
   
-  .error-link {
+  .errorLink {
     display: inline-block; 
     margin-top: 1.5rem; 
     padding: 0.5rem 1rem; 
@@ -50,7 +50,7 @@
     transition: transform 0.2s; 
   }
   
-  .error-link:hover {
+  .errorLink:hover {
     background-color: #7c7a7a; 
     color: rgb(255, 255, 255);
     transform: scale(1.1);
