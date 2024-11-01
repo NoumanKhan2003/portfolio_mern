@@ -1,0 +1,94 @@
+
+.container {
+    display: flex;
+    margin: 3rem auto;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.contactInfo {
+    background-color: #a2dcae;
+    color: rgb(38, 6, 74);
+    padding: 20px;
+    width: 40%;
+}
+
+.infoSection {
+    margin-bottom: 20px;
+}
+
+.infoSection h2 {
+    color: #1c0f43;
+    border-bottom: 0.2rem solid rgb(28, 18, 56);    
+}
+
+.infoSection p {
+    margin: 5px 0;
+}
+
+.contactForm {
+    padding: 20px;
+    width: 60%;
+}
+
+.contactForm h2 {
+    color: #d89b3c;
+}
+
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm label {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.contactForm input,
+.contactForm textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: calc(100% - 22px);
+}
+
+.contactForm button {
+    background-color: #d89b3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.contactForm button:hover {
+    background-color: #c87b2c;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: auto;
+        padding: 0;
+    }
+
+    .contactInfo {
+        padding: 2vw;
+        padding-top: 2rem;
+    }
+.contactForm{
+    padding-top: 2rem;
+}
+    .infoSection {
+        overflow-x: auto;
+
+    }
+
+    .contactForm input,
+    .contactForm textarea {
+        padding: 1vw;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
