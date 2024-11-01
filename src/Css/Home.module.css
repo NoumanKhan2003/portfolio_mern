@@ -81,6 +81,7 @@ cursor: grab;
     width: 90vw;
     margin: auto;
     object-fit: cover;
+    margin-bottom: 2rem;
 }
 .about{
     font-size: 8vw;

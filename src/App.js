@@ -6,6 +6,7 @@ import About from './Components/About';
 import Projects from "./Components/Projects";
 import Contact from './Components/Contact';
 import Error404 from "./Components/Error404";
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
