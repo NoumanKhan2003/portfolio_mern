@@ -13,10 +13,10 @@ const Contact = () => {
     });
 
     const handleChange = (e) => {
-        const { key, value } = e.target;
+        const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
-            [key]: value,
+            [name]: value,
         }));
     };
 

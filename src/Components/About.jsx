@@ -1,8 +1,10 @@
 import React from 'react';
-
+import AboutMe from '../Components/AboutMe';
 const About = () => {
   return (
-    <div></div>
+    <div>
+<AboutMe/>
+    </div>
   )
 }
 
