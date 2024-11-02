@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ContactCss from '../Css/Contact.module.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faEye , faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -31,13 +31,55 @@ const Contact = () => {
         });
     };
 
+    const [eye1, seteye1] = useState(faEyeSlash);
+    const [eye2, seteye2] = useState(faEyeSlash);
+    const [eye3, seteye3] = useState(faEyeSlash);
+    const [num1, setnum1] = useState("***********");
+    const [num2, setnum2] = useState("***********");
+    const [Add, setAdd] = useState("******************************");
+
+    const changeViewNum1 =()=>{
+        if(eye1 === faEyeSlash){
+            seteye1(faEye);
+            setnum1(7982234003);
+        }
+        else{
+            seteye1(faEyeSlash);
+            setnum1("***********");
+
+        }
+    }
+    const changeViewNum2 =()=>{
+        if(eye2 === faEyeSlash){
+            seteye2(faEye);
+            setnum2(9311312250);
+
+        }
+        else{
+            seteye2(faEyeSlash);
+            setnum2("***********");
+        }
+    }
+    const changeViewAddress =()=>{
+        if(eye3 === faEyeSlash){
+            seteye3(faEye);
+            setAdd("1294/A, Dabua Colony, Faridabad, Haryana")
+        }
+        else{
+            seteye3(faEyeSlash);
+            setAdd("******************************");
+        }
+    }
+  
+
+    
     return (
             <main className={ContactCss.container}>
                 <div className={ContactCss.contactInfo}>
                     <div className={ContactCss.infoSection}>
                         <h2>Mobile:</h2>
-                        <p>Nouman Khan<br />7982234003 <FontAwesomeIcon icon={faEye} /></p>
-                        <p>Other<br />9311312250 <FontAwesomeIcon icon={faEye} /></p>
+                        <p>Nouman Khan<br />{num1} <FontAwesomeIcon icon={eye1} onClick={changeViewNum1} className={ContactCss.icon}/></p>
+                        <p>Other<br />{num2} <FontAwesomeIcon icon={eye2}  onClick={changeViewNum2} className={ContactCss.icon}/></p>
                     </div>
                     <div className={ContactCss.infoSection}>
                         <h2>Email:</h2>
@@ -46,7 +88,7 @@ const Contact = () => {
                     </div>
                     <div className={ContactCss.infoSection}>
                         <h2>Address:</h2>
-                        <p>1294/A, Dabua Colony, Faridabad, Haryana <FontAwesomeIcon icon={faEye} /><br />Pin-121001</p>
+                        <p>{Add} <FontAwesomeIcon icon={eye3}  onClick={changeViewAddress} className={ContactCss.icon}/><br />Pin-121001</p>
                     </div>
                 </div>
                 <div className={ContactCss.contactForm}>
