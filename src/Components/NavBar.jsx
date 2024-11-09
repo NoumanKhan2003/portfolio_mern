@@ -1,15 +1,13 @@
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
-import "../Css/NavBar.css";
+import NavBarCss from "../Css/NavBar.module.css";
 
-const navLinkStyle = ({ isActive }) => {
-  return {
-    color: isActive ? "green" : "black",
-    fontWeight: isActive ? "bold" : "normal",
-    textDecoration: "none", 
-    borderBottom: isActive ? "3px solid green" : "none",
-  };
-};
+const navLinkStyle = ({ isActive }) => ({
+  color: isActive ? "green" : "black",
+  fontWeight: isActive ? "bold" : "normal",
+  textDecoration: "none",
+  borderBottom: isActive ? "3px solid green" : "none",
+});
 
 const NavBar = () => {
   const navCollapseRef = useRef(null);
@@ -22,10 +20,10 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-          <div className="imageLogo">
-            <img src={require('../Assests/nouman.png')} alt="Nouman" />
+      <nav className={`${NavBarCss.navbar} navbar navbar-expand-lg`}>
+        <div className={`container-fluid ${NavBarCss["container-fluid"]}`}>
+          <div className={NavBarCss.imageLogo}>
+            <img src={require("../Assests/nouman.png")} alt="Nouman" className={NavBarCss.img}/>
           </div>
           <button
             className="navbar-toggler"
@@ -39,8 +37,8 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav" ref={navCollapseRef}>
-            <ul className="navbar-nav">
-              <li className="nav-item">
+            <ul className={`navbar-nav ${NavBarCss["navbar-nav"]}`}>
+              <li className={`nav-item ${NavBarCss["nav-item"]}`}>
                 <NavLink
                   style={navLinkStyle}
                   className="nav-link"
@@ -50,7 +48,7 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className={`nav-item ${NavBarCss["nav-item"]}`}>
                 <NavLink
                   style={navLinkStyle}
                   className="nav-link"
@@ -60,7 +58,7 @@ const NavBar = () => {
                   About
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className={`nav-item ${NavBarCss["nav-item"]}`}>
                 <NavLink
                   style={navLinkStyle}
                   className="nav-link"
@@ -70,7 +68,7 @@ const NavBar = () => {
                   Projects
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className={`nav-item ${NavBarCss["nav-item"]}`}>
                 <NavLink
                   style={navLinkStyle}
                   className="nav-link"
