@@ -12,6 +12,7 @@ import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import SchoolIcon from '@mui/icons-material/School';
 import { Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -30,8 +31,8 @@ export default function SwipeableTemporaryDrawer() {
   };
 
   const projectData = [
-    { id: 1, name: 'CareerUp',icon: <WorkOutlineIcon/>, description: 'Personalised Job Search Portal' },
-    { id: 2, name: 'Portfolio',icon: <SchoolIcon/>, description: 'Porfolio Website for showcase of projects' },
+    { id: 1, name: 'CareerUp',icon: <WorkOutlineIcon/>, description: 'Personalised Job Search Portal', link: 'careerup' },
+    { id: 2, name: 'Portfolio',icon: <SchoolIcon/>, description: 'Porfolio Website for showcase of projects',link: 'portfolio'  },
   ];
 
   const list = (anchor) => (
@@ -47,8 +48,8 @@ export default function SwipeableTemporaryDrawer() {
 
         {projectData.map((project, index) => (
           <ListItem key={project.id} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
+            <ListItemButton component={Link} to={`/projects/${project.link}`}>
+            <ListItemIcon>
                {project.icon}
               </ListItemIcon>
               <ListItemText

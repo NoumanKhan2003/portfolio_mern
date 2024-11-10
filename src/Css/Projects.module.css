@@ -1,0 +1,29 @@
+.techlist{
+    display: flex;
+    justify-content: center;
+padding: 0;
+}
+.techitem{
+    padding: 1rem;
+    list-style-type: none;
+    margin: auto;
+    background: #0d120c80;
+    color: white;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    transition: transform 1.5s ease-in-out;
+
+
+}
+.techitem:hover{
+    transform: scale(1.3) rotate(1turn);
+
+cursor: pointer;
+transition: transform 0.1s ease-in-out, transform 2s ease-out;
+
+}
+@media (max-width: 600px){
+    .techlist{
+flex-wrap: wrap;
+    }
+}

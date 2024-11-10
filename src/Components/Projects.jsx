@@ -1,11 +1,12 @@
 import React from 'react';
 import Drawer from './Drawer';
-import VideoPlayer from './VideoPlayer';
+import { Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Projects = () => {
   return (
     <div>
       <Drawer/> 
-      <VideoPlayer/>
+      <Outlet/>
         </div>
   );
 };
