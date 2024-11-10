@@ -1,9 +1,13 @@
-import React from 'react'
-
+import React from 'react';
+import Drawer from './Drawer';
+import VideoPlayer from './VideoPlayer';
 const Projects = () => {
   return (
-    <div>Projects</div>
-  )
-}
+    <div>
+      <Drawer/> 
+      <VideoPlayer/>
+        </div>
+  );
+};
 
-export default Projects
+export default Projects;
