@@ -22,7 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />}>
 
-          <Route index path="careerup" element={<ProjectShowSection 
+          <Route index element={<ProjectShowSection 
             title="CareerUp (Job-Portal) (PHP Based)" 
             body1="CareerUp is the Web based platform to find personalised job according to your skills, locations and types of jobs required. You can find jobs internships and events in this portal. You also get some additional features like Automatic resume building using multiple templates." 
             body2="CareerUp is not only for the job seekers, but also for the employers to post easily the jobs and events in just a step." 

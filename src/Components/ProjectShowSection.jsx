@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import CareerupCss from '../Css/Projects.module.css'
+import ProjectsCss from '../Css/Projects.module.css'
 import {Box,Typography } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
-const Careerup=(props)=> {
+const Projects=(props)=> {
   return (
     <div>
       <ReactPlayer
@@ -23,9 +23,9 @@ const Careerup=(props)=> {
 <Box>
   <Box>
     <Typography variant='h5'>
-    <ul className={CareerupCss.techlist}>
+    <ul className={ProjectsCss.techlist}>
         {props.tech.map((technology, index) => (
-          <li key={index} className={CareerupCss.techitem}>
+          <li key={index} className={ProjectsCss.techitem}>
             {technology}
           </li>
         ))}
@@ -41,4 +41,4 @@ const Careerup=(props)=> {
   );
 };
 
-export default Careerup;
+export default Projects;
