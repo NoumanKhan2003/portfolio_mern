@@ -15,7 +15,7 @@
   }
   
   .nav-item {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     position: relative;
     transition: transform 0.2s ease-in-out;
   }
@@ -31,9 +31,16 @@
     height: 3px;
     background-color: green;
     left: 0;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.2s ease-in-out;
   }
-  
+  .modeBtn{
+    background-color: #b9f5b0;
+    margin: auto;
+    margin-right: 2rem;
+    border-radius: 2rem;
+    padding: 0.1rem 0.5rem;
+    
+  }
   .nav-item:hover::after,
   .nav-item.active::after {
     width: 100%;
@@ -42,7 +49,9 @@
     width: 100%;
   }
   .imageLogo {
-    width: 16vw;
+    width: 7vw;
+    margin-left: 2rem;
+    margin-right: 1rem;
   }
   
   @media (max-width: 700px) {
@@ -54,7 +63,32 @@
       margin-bottom: 0;
     }
     .imageLogo {
-      width: 70%;
+      width: 27vw;
+      margin-left: 2rem;
+      margin-right: 1rem;
     }
+    .modeBtn{
+      background-color: #b9f5b0;
+      margin: auto;
+      margin-right: 0;
+      border-radius: 2rem;
+      padding: 0.1rem 0.4rem;
+      width: fit-content;
+      margin-left: 0.8rem;
+      margin-bottom: 0.7rem;
+    }
+    #navTogglerIcon{
+      margin-right: 1rem;
+    }  
+    .nav-item:hover::after,
+    .nav-item.active::after {
+      width: 0 !important;
+    }
+.modeBtn{
+  margin-top: 0.5rem;
+}
+.nav-item{
+  padding-left: 0.3rem;
+}
   }
   
