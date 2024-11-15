@@ -1,12 +1,14 @@
 import React from "react";
 import SkillsCss from "../Css/Skill.module.css";
+import ImportantDevicesOutlinedIcon from '@mui/icons-material/ImportantDevicesOutlined';
 const Skills = () => {
   return (
     <div className={SkillsCss.wrapper}>
       <div className={SkillsCss.container}>
-        <div className={SkillsCss.headingDiv}>
-          <h1 className={SkillsCss.heading}>
-            Technologies, I have worked with
+        <div className={SkillsCss.headingDiv} >
+          <h1 className={SkillsCss.heading} >
+            Technologies, I have worked with 
+            <ImportantDevicesOutlinedIcon fontSize="larger" className={SkillsCss.headingIcon}/>
           </h1>
         </div>
         <div className={SkillsCss.skilldiv1}>
@@ -17,8 +19,8 @@ const Skills = () => {
                   src={require("../Assests/react.png")}
                   alt="React"
                   className={SkillsCss.img}
-                />
-                <h1 className={SkillsCss.h1}>ReactJs</h1>
+                /> <div>
+                <h1 className={SkillsCss.h1}>ReactJs</h1></div>
               </div>
               <div className={SkillsCss.imgDivBack}>
                 <h2 className={SkillsCss.backHeading}>ReactJs</h2>

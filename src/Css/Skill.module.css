@@ -1,5 +1,7 @@
 .wrapper{
-    background-color: rgb(239, 253, 233);
+background-image:url('../Assests/5134341.jpg') ;
+background-size: cover;
+background-repeat: no-repeat;
 }
 .headingDiv{
     padding-top: 1rem;
@@ -7,18 +9,21 @@
 }
 .heading{
     text-align: center;
-    background-color: rgb(215, 231, 192);
+    background-color: rgba(216, 220, 218, 0.785);
     padding-top: 1rem;
     padding-bottom: 1rem;
      width: 65%;
      margin: auto;
-     border-radius: 2rem;
+     border-radius: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 transition: transform 0.3s;
-box-shadow: 1px 1px 5px 1px black;
+box-shadow: 1px 1px 3px 1px black;
 }
 .heading:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+.headingIcon{
+    margin-left: 1rem;
 }
 .container {
     margin: auto;
@@ -45,17 +50,27 @@ box-shadow: 1px 1px 5px 1px black;
 }
 .h1{
     color: rgb(2, 3, 21);
+    border: 2px solid black;
+    width: fit-content;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 0.2rem 1rem;
+    font-size: 2rem;
+    
 }
 .imgDivOuter{
     perspective: 1000px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     margin-top: 1rem;
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 .imgdivInner {
     margin: auto;
-    width:  17rem;
-    height: 13rem;
-    background-color: #eff7dc; 
+    width:  16rem;
+    height: 13.2rem;
+    background-color: #eaf0e2; 
     border-radius: 1rem;
     box-shadow: 1px 1px 5px 2px rgb(0, 0, 0);
     transition: transform 0.6s ;
@@ -64,13 +79,12 @@ align-items: center;
     flex-direction: column;
     transform-style: preserve-3d;
     position: relative;
-
 }
 
 .imgdivInner:hover{
     /* transform: scale(1.1);  */
     transform: rotateY(180deg);
-
+cursor: pointer;
 }
 .imgDivFront, .imgDivBack{
     -webkit-backface-visibility: hidden;
@@ -93,8 +107,13 @@ align-items: center;
 }
 .backHeading{
     text-align: center;
-    font-size: 3rem;
-
+    font-size: 2rem;
+    width: fit-content;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 0.2rem 1rem;
+    border: 2px solid black;
+margin-top: 1rem;
 }
 .backDescribe{
     font-size: 1.1rem;
@@ -119,6 +138,10 @@ align-items: center;
     .heading{
         width: 90%;
         text-decoration: none;
+    }
+    .imgdivInner{
+        width:  17rem;
+        height: 13rem;
     }
 }
 
