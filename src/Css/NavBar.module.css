@@ -4,7 +4,7 @@
   
   .navbar {
     padding: 0;
-    background: #ecffe9;
+    background: #f5fff3;
     margin: 0;
   }
   
@@ -29,17 +29,22 @@
     position: absolute;
     width: 0;
     height: 3px;
-    background-color: green;
+    background-color: rgb(0, 72, 0);
     left: 0;
     transition: width 0.2s ease-in-out;
+    
   }
   .modeBtn{
-    background-color: #b9f5b0;
+    background-color: #c4ffe9;
     margin: auto;
     margin-right: 2rem;
     border-radius: 2rem;
     padding: 0.1rem 0.5rem;
-    
+    transition: transform 0.2s;
+  }
+  .modeBtn:hover{
+    background-color: #adf6dbf4;
+transform: scale(1.1);
   }
   .nav-item:hover::after,
   .nav-item.active::after {
@@ -68,7 +73,6 @@
       margin-right: 1rem;
     }
     .modeBtn{
-      background-color: #b9f5b0;
       margin: auto;
       margin-right: 0;
       border-radius: 2rem;
