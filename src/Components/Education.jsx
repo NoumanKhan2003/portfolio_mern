@@ -3,7 +3,8 @@ import EducationCss from "../Css/Education.module.css";
 import collegeImg from "../Assests/Nouman Marksheet.jpg";
 import highSchoolImg from "../Assests/Nouman 12th.jpg";
 import schoolImg from "../Assests/Nouman 10th.jpg";
-
+import { Button } from "@mui/material";
+import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 const Education = () => {
   const handleDownload = (fileUrl, fileName) => {
     const link = document.createElement("a");
@@ -29,14 +30,16 @@ const Education = () => {
             B.Tech(Computer Science and Engineering){" "}
             <p className={EducationCss.year}>(2026)</p>
           </p>
-          <button
-            className={EducationCss.button}
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={<CloudDownloadOutlinedIcon />}
             onClick={() =>
               handleDownload(collegeImg, "Nouman University Marksheet")
             }
           >
             Download
-          </button>
+          </Button>
         </div>
         <div className={EducationCss.senior}>
           <h2 className={EducationCss.h2}>
@@ -45,14 +48,16 @@ const Education = () => {
           <p className={EducationCss.p}>
             Non-Medical (CBSE) <p className={EducationCss.year}>(2022)</p>
           </p>
-          <button
-            className={EducationCss.button}
+          <Button
+           variant="contained"
+           color="primary"
+           startIcon={<CloudDownloadOutlinedIcon />}
             onClick={() =>
               handleDownload(highSchoolImg, "Nouman 12th Marksheet")
             }
           >
             Download
-          </button>
+          </Button>
         </div>
         <div className={EducationCss.junior}>
           <h2 className={EducationCss.h2}>
@@ -61,12 +66,14 @@ const Education = () => {
           <p className={EducationCss.p}>
             HBSE <p className={EducationCss.year}>(2020)</p>
           </p>
-          <button
-            className={EducationCss.button}
+          <Button
+           variant="contained"
+           color="primary"
+           startIcon={<CloudDownloadOutlinedIcon />}
             onClick={() => handleDownload(schoolImg, "Nouman 10th Marksheet")}
           >
             Download
-          </button>
+          </Button>
         </div>
       </div>
     </div>
