@@ -10,8 +10,10 @@ import Footer from "./Components/Footer";
 import ProjectShowSection from './Components/ProjectShowSection';
 import careerup from "./Assests/careerup.mp4";
 import portfolio_mern from './Assests/vd.mp4'
+import { ModeProvider } from "./Components/ModeContext";
 function App() {
   return (
+    <ModeProvider>
     <div className="App">
       <BrowserRouter>
         <header>
@@ -55,6 +57,7 @@ function App() {
       </BrowserRouter>
       <Footer />
     </div>
+    </ModeProvider>
   );
 }
 

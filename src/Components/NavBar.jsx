@@ -1,10 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect ,useContext } from "react";
 import { NavLink } from "react-router-dom";
 import NavBarCss from "../Css/NavBar.module.css";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import { Box, Typography } from "@mui/material";
-
+import { ModeContext } from "./ModeContext";
 const navLinkStyle = ({ isActive }, mode) => ({
   color: isActive
     ? mode === "light"
@@ -49,12 +49,8 @@ const NavBar = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-  const [mode, setMode] = useState("dark");
+  const { mode, changeMode } = useContext(ModeContext);
 
-  const changeMode = (event) => {
-    const newMode = event.target.checked ? "dark" : "light";
-    setMode(newMode);
-  };
 
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
