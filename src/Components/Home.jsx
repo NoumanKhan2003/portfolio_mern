@@ -17,6 +17,7 @@ const Home = () => {
     };
   const handleAboutClick=()=>{
     navigate('/about');
+    window.scrollTo(0,0);
   };
   const { mode } = useContext(ModeContext);
 
@@ -49,6 +50,17 @@ const Home = () => {
         <div className={HomeCss.imagediv} data-theme={mode}>
           <img src={require("../Assests/noumanimg.jpg")} alt="Nouman Pic" onClick={handleAboutClick} data-theme={mode}/>
         </div>
+        <Button
+          className={HomeCss.download2}
+          variant="contained"
+          color="success"
+          size="large"
+          onClick={() => handleResumeClick(Resume, "Nouman's Resume")}
+          data-theme={mode}
+      startIcon={<DownloadOutlinedIcon/>}
+        >
+         Download CV
+        </Button>
       </div>
     </div>
   );

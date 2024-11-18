@@ -12,7 +12,7 @@ const navLinkStyle = ({ isActive }, mode) => ({
       : "#0e9b0d"
     : mode === "light"
     ? "black"
-    : "white",
+    : "#f9ffba ",
   fontWeight: isActive ? "700" : "normal",
   textDecoration: "none",
   borderBottom: isActive ? "4px solid green" : "none",

@@ -29,7 +29,15 @@
   color: black;
   font-weight: bold;
 }
+.download2[data-theme="dark"] {
+  background-color: rgb(38, 176, 14);
+  color: black;
+  font-weight: bold;
+}
 .download:hover[data-theme="dark"] {
+  background-color: rgb(33, 147, 12);
+}
+.download2:hover[data-theme="dark"] {
   background-color: rgb(33, 147, 12);
 }
 .main {
@@ -83,6 +91,7 @@
   width: fit-content;
   transition: box-shadow 0.3s;
   color: rgba(0, 44, 2, 0.912);
+  transition: padding 0.2s;
 }
 .about {
   font-size: 1.3rem;
@@ -91,11 +100,19 @@
 .name2:hover {
   box-shadow: 1px 1px 3px 2px rgb(0, 22, 5);
   cursor: grab;
+  padding: 0rem 1rem;
 }
 .download {
   transition: transform 0.2s !important;
 }
+.download2{
+  transition: transform 0.2s !important;
+display: none !important;
+}
 .download:hover {
+  transform: scale(1.1);
+}
+.download2:hover {
   transform: scale(1.1);
 }
 
@@ -120,14 +137,30 @@
   }
   .right {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .imagediv {
     width: 90vw;
     margin: auto;
     object-fit: cover;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .about {
     font-size: 6.3vw;
+  }
+  .imagediv img:hover {
+    transform: scale(1);
+  }
+  .download{
+    display: none !important;
+  }
+  .download2{
+    display: inline-block !important;
+    margin: auto !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    width: fit-content;
   }
 }
