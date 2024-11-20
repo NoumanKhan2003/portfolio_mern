@@ -1,147 +1,175 @@
-.wrapper{
-background-image:url('../Assests/5134341.jpg') ;
-background-size: cover;
-background-repeat: no-repeat;
+.wrapper[data-theme="dark"] {
+  background-image: url("../Assests/5053309.jpg");
 }
-.headingDiv{
-    padding-top: 1rem;
-    padding-bottom:2rem ;
+.heading[data-theme="dark"] {
+  background-color: rgba(0, 10, 1, 0.492);
+  color: rgb(237, 242, 178);
+  border: 1px solid gold;
 }
-.heading{
-    text-align: center;
-    background-color: rgba(216, 220, 218, 0.785);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-     width: 65%;
-     margin: auto;
-     border-radius: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-transition: transform 0.3s;
-box-shadow: 1px 1px 3px 1px black;
+.wrapper {
+  background-image: url("../Assests/5134341.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.heading:hover{
-    transform: scale(1.05);
+.imgdivInner[data-theme="dark"] {
+  background-color: black;
 }
-.headingIcon{
-    margin-left: 1rem;
+.frontHeading[data-theme="dark"] {
+  color: rgb(184, 255, 190);
+  border: 1px solid gold;
+}
+.backHeading[data-theme="dark"] {
+  color: rgb(184, 255, 190);
+  border: 1px solid gold;
+}
+.backDescribe[data-theme="dark"] {
+  color: #eaf0e2;
+}
+.imgDivOuter[data-theme="dark"] {
+  border: 2px solid gold;
+}
+.headingDiv {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.heading {
+  text-align: center;
+  background-color: rgba(216, 220, 218, 0.785);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 65%;
+  margin: auto;
+  border-radius: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: transform 0.3s;
+  box-shadow: 1px 1px 3px 1px black;
+}
+.heading:hover {
+  transform: scale(1.05);
+}
+.headingIcon {
+  margin-left: 1rem;
 }
 .container {
-    margin: auto;
+  margin: auto;
 }
-.skilldiv1{
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+.skilldiv1 {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
 }
-.skilldiv2{
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+.skilldiv2 {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
 }
-.skilldiv3{
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+.skilldiv3 {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
 }
-.skilldiv4{
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+.skilldiv4 {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
 }
-.h1{
-    color: rgb(2, 3, 21);
-    border: 2px solid black;
-    width: fit-content;
-    border-radius: 1rem;
-    margin: auto;
-    padding: 0.2rem 1rem;
-    font-size: 2rem;
-    
+.frontHeading {
+  color: rgb(2, 3, 21);
+  border: 2px solid black;
+  width: fit-content;
+  border-radius: 1rem;
+  margin: auto;
+  padding: 0.2rem 1rem;
+  font-size: 2rem;
 }
-.imgDivOuter{
-    perspective: 1000px;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    border: 2px solid black;
-    padding: 1rem;
-    border-radius: 1rem;
+.imgDivOuter {
+  perspective: 1000px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 .imgdivInner {
-    margin: auto;
-    width:  16rem;
-    height: 13.2rem;
-    background-color: #eaf0e2; 
-    border-radius: 1rem;
-    box-shadow: 1px 1px 5px 2px rgb(0, 0, 0);
-    transition: transform 0.6s ;
-    display: flex;
-align-items: center;
-    flex-direction: column;
-    transform-style: preserve-3d;
-    position: relative;
+  margin: auto;
+  width: 15rem;
+  height: 13rem;
+  background-color: #eff4e6;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 5px 2px rgb(0, 0, 0);
+  transition: transform 0.6s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
-.imgdivInner:hover{
-    /* transform: scale(1.1);  */
-    transform: rotateY(180deg);
-cursor: pointer;
+.imgdivInner:hover {
+  /* transform: scale(1.1);  */
+  transform: rotateY(180deg);
+  cursor: pointer;
 }
-.imgDivFront, .imgDivBack{
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.imgDivFront,
+.imgDivBack {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-.imgDivFront{
-    text-align: center;
+.imgDivFront {
+  text-align: center;
 }
-.imgDivBack{
-    transform: rotateY(180deg);
+.imgDivBack {
+  transform: rotateY(180deg);
 }
 .img {
-    width: 80%;
-    height: 60%;
-    margin: 1rem;
-    object-fit: contain;
+  width: 80%;
+  height: 60%;
+  margin: 1rem;
+  object-fit: contain;
 }
-.backHeading{
-    text-align: center;
-    font-size: 2rem;
-    width: fit-content;
-    border-radius: 1rem;
-    margin: auto;
-    padding: 0.2rem 1rem;
-    border: 2px solid black;
-margin-top: 1rem;
+.backHeading {
+  text-align: center;
+  font-size: 2rem;
+  width: fit-content;
+  border-radius: 1rem;
+  margin: auto;
+  padding: 0.2rem 1rem;
+  border: 2px solid black;
+  margin-top: 1rem;
 }
-.backDescribe{
-    font-size: 1.1rem;
-    padding: 0.5rem;
+.backDescribe {
+  font-size: 1.1rem;
+  padding: 0.5rem;
 }
 @media (max-width: 600px) {
-    .container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller grid for tablets */
-    }
-    .skilldiv1{
-        flex-wrap: wrap;
-    }
-    .skilldiv2{
-        flex-wrap: wrap;
-    }
-    .skilldiv3{
-        flex-wrap: wrap;
-    }
-    .skilldiv4{
-        flex-wrap: wrap;
-    }
-    .heading{
-        width: 90%;
-        text-decoration: none;
-    }
-    .imgdivInner{
-        width:  17rem;
-        height: 13rem;
-    }
+  .container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(120px, 1fr)
+    ); /* Smaller grid for tablets */
+  }
+  .skilldiv1 {
+    flex-wrap: wrap;
+  }
+  .skilldiv2 {
+    flex-wrap: wrap;
+  }
+  .skilldiv3 {
+    flex-wrap: wrap;
+  }
+  .skilldiv4 {
+    flex-wrap: wrap;
+  }
+  .heading {
+    width: 90%;
+    text-decoration: none;
+  }
+  .imgdivInner {
+    width: 17rem;
+    height: 13rem;
+  }
 }
-

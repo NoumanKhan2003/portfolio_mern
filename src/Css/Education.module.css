@@ -1,6 +1,21 @@
+.container[data-theme="dark"]{
+    background-image: url('../Assests/6193485.jpg');
+    background-repeat: no-repeat;
+}
+.h1[data-theme="dark"]{
+    background-color: rgba(0, 10, 1, 0.492);
+    color: rgb(237, 242, 178);
+    border: 1px solid gold;
+}
+.h2[data-theme="dark"]{
+    color: rgb(183, 242, 179);
+}
+.p[data-theme="dark"]{
+    color: rgb(226, 248, 225);
+}
 .container{
 background-image: url('../Assests/5134341.jpg');
-background-size: contain;
+background-size: cover;
 padding: 1rem;
 }
 .headingDiv{
@@ -53,5 +68,8 @@ transition: transform 0.3s;
     }
     .container{
         padding: 0;
+    }
+    .p{
+        margin-bottom: 0rem;
     }
 }
