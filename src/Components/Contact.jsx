@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import ContactCss from '../Css/Contact.module.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye , faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-
+import { useContext } from "react";
+import { ModeContext } from "./ModeContext";
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -71,31 +72,32 @@ const Contact = () => {
         }
     }
   
-
+    const { mode } = useContext(ModeContext);
     
     return (
-            <main className={ContactCss.container}>
-                <div className={ContactCss.contactInfo}>
-                    <div className={ContactCss.infoSection}>
-                        <h2>Mobile:</h2>
+            <main className={ContactCss.container} data-theme={mode}>
+                <div className={ContactCss.contactInfo} data-theme={mode}>
+                    <div className={ContactCss.infoSection} data-theme={mode}>
+                        <h2 data-theme={mode}>Mobile:</h2>
                         <p>Nouman Khan<br />{num1} <FontAwesomeIcon icon={eye1} onClick={changeViewNum1} className={ContactCss.icon}/></p>
                         <p>Other<br />{num2} <FontAwesomeIcon icon={eye2}  onClick={changeViewNum2} className={ContactCss.icon}/></p>
                     </div>
-                    <div className={ContactCss.infoSection}>
-                        <h2>Email:</h2>
+                    <div className={ContactCss.infoSection} data-theme={mode}>
+                        <h2 data-theme={mode}>Email:</h2>
                         <p>General Query:<br />noumankhan16859@gmail.com</p>
                         <p>Official Email:<br />noumanyt2003@gmail.com</p>
                     </div>
-                    <div className={ContactCss.infoSection}>
-                        <h2>Address:</h2>
+                    <div className={ContactCss.infoSection} data-theme={mode}>
+                        <h2 data-theme={mode}>Address:</h2>
                         <p>{Add} <FontAwesomeIcon icon={eye3}  onClick={changeViewAddress} className={ContactCss.icon}/><br />Pin-121001</p>
                     </div>
                 </div>
-                <div className={ContactCss.contactForm}>
-                    <h2>Message Me / Report an Issue</h2>
+                <div className={ContactCss.contactForm} data-theme={mode}>
+                    <h2 data-theme={mode}>Message Me / Report an Issue</h2>
                     <form onSubmit={handleSubmit}>
-                        <label htmlFor="name">Your Name:</label>
+                        <label htmlFor="name" data-theme={mode}>Your Name:</label>
                         <input
+                         data-theme={mode}
                             type="text"
                             id="name"
                             name="name"
@@ -103,8 +105,9 @@ const Contact = () => {
                             onChange={handleChange}
                             required
                         />
-                        <label htmlFor="email">Email Address:</label>
+                        <label htmlFor="email" data-theme={mode}>Email Address:</label>
                         <input
+                         data-theme={mode}
                             type="email"
                             id="email"
                             name="email"
@@ -113,8 +116,9 @@ const Contact = () => {
                             required
                         />
                         
-                        <label htmlFor="mobile">Mobile Number:</label>
+                        <label htmlFor="mobile" data-theme={mode}>Mobile Number:</label>
                         <input
+                         data-theme={mode}
                             type="number"
                             id="mobile"
                             name="mobile"
@@ -122,8 +126,9 @@ const Contact = () => {
                             onChange={handleChange}
                         />
                         
-                        <label htmlFor="message">Message: (Max: 500 words)</label>
+                        <label htmlFor="message" data-theme={mode}>Message: (Max: 500 words)</label>
                         <textarea
+                         data-theme={mode}
                             id="message"
                             name="message"
                             rows="4"
@@ -131,7 +136,7 @@ const Contact = () => {
                             onChange={handleChange}
                             required
                         ></textarea>
-                        <button type="submit">SEND</button>
+                        <button type="submit" data-theme={mode}>SEND</button>
                     </form>
                 </div>
             </main>
