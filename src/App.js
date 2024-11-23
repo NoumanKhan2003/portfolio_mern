@@ -9,7 +9,7 @@ import Error404 from "./Components/Error404";
 import Footer from "./Components/Footer";
 import ProjectShowSection from './Components/ProjectShowSection';
 import careerup from "./Assests/careerup.mp4";
-import portfolio_mern from './Assests/vd.mp4'
+import portfolio_mern from './Assests/portfolioVideo.mp4'
 import { ModeProvider } from "./Components/ModeContext";
 function App() {
   return (
