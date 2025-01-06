@@ -3,7 +3,7 @@ import ContactCss from '../Css/Contact.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye , faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from "react";
-import { ModeContext } from "./ModeContext";
+import { ModeContext } from "../Components/ModeContext";
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',

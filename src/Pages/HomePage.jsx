@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 import { useContext } from "react";
-import {ModeContext} from "./ModeContext"
+import {ModeContext} from "../Components/ModeContext";
 import Resume from "../Assests/ResumeNouman.pdf"
 const Home = () => {
   const navigate = useNavigate();

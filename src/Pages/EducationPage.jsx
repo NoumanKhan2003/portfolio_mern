@@ -5,7 +5,7 @@ import schoolImg from "../Assests/Nouman 10th.jpg";
 import { Button } from "@mui/material";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import { useContext } from "react";
-import { ModeContext } from "./ModeContext";
+import { ModeContext } from "../Components/ModeContext";
 const Education = () => {
   const handleDownload = (fileUrl, fileName) => {
     const link = document.createElement("a");

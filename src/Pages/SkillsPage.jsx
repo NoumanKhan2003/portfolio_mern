@@ -2,7 +2,7 @@ import React from "react";
 import SkillsCss from "../Css/Skill.module.css";
 import ImportantDevicesOutlinedIcon from "@mui/icons-material/ImportantDevicesOutlined";
 import { useContext } from "react";
-import { ModeContext } from "./ModeContext";
+import { ModeContext } from "../Components/ModeContext";
 const Skills = () => {
   const { mode } = useContext(ModeContext);
   return (

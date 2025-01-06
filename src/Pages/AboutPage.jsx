@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutMe from '../Components/AboutMe';
-import Skills from './Skills';
-import Education from './Education';
+import Skills from './SkillsPage';
+import Education from './EducationPage';
 const About = () => {
   return (
     <div>

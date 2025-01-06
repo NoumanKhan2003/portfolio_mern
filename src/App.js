@@ -1,11 +1,11 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
-import Error404 from "./Components/Error404";
+import Home from "./Pages/HomePage";
+import About from "./Pages/AboutPage";
+import Projects from "./Pages/ProjectsPage";
+import Contact from "./Pages/ContactPage";
+import Error404 from "./Pages/Error404Page";
 import Footer from "./Components/Footer";
 import ProjectShowSection from './Components/ProjectShowSection';
 import careerup from "./Assests/careerup.mp4";
