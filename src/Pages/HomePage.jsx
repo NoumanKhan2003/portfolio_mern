@@ -19,14 +19,11 @@ const Home = () => {
 
   useEffect(() => {
     setThemeChange(true);
-  }, [mode]);
-
-  useEffect(() => {
-    if (themeChange) {
-      setLoading(false);
+    const themeTimeout = setTimeout(() => {
       setThemeChange(false);
-    }
-  }, [themeChange]);
+    }, 400);
+    return () => clearTimeout(themeTimeout);
+  }, [mode]);
 
   const handleAboutClick = () => {
     navigate("/about");
