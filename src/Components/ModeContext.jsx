@@ -5,7 +5,7 @@ export const ModeContext = createContext();
 
 // ModeProvider Component
 export const ModeProvider = ({ children }) => {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
 
   // Toggle Mode Function
   const changeMode = () => {
