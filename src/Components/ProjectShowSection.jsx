@@ -3,10 +3,22 @@ import ReactPlayer from "react-player";
 import ProjectsCss from "../Css/Projects.module.css";
 import { Box, Typography } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import ProgressCircle from "../Components/ProgressCircle";
 import { ModeContext } from "./ModeContext";
+
 const Projects = (props) => {
   const { mode } = useContext(ModeContext);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    return <ProgressCircle />;
+  }
+  
   return (
     <div className={ProjectsCss.main} data-theme={mode}>
       <ReactPlayer
