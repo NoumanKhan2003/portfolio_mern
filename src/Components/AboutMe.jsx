@@ -2,15 +2,37 @@ import React from "react";
 import AboutMeCss from "../Css/AboutMe.module.css";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ModeContext } from "./ModeContext";
+import ProgressCircle from "../Components/ProgressCircle";
 import PermContactCalendarOutlinedIcon from "@mui/icons-material/PermContactCalendarOutlined";
+
 const AboutMe = () => {
+  const { mode } = useContext(ModeContext);
+  const [loading, setLoading] = useState(true);
+  const [themeChange, setThemeChange] = useState(false);
   const navigate = useNavigate();
+
   const handleContactClick = () => {
     navigate("/contact");
   };
-  const { mode } = useContext(ModeContext);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    setThemeChange(true);
+    const themeTimeout = setTimeout(() => {
+      setThemeChange(false);
+    }, 400);
+    return () => clearTimeout(themeTimeout);
+  }, [mode]);
+
+  if (loading || themeChange) {
+    return <ProgressCircle />;
+  }
+
   return (
     <div className={AboutMeCss.container} data-theme={mode}>
       <div className={AboutMeCss.left}>
@@ -24,8 +46,12 @@ const AboutMe = () => {
       </div>
       <div className={AboutMeCss.right}>
         <div className={AboutMeCss.details}>
-         <h1 className={AboutMeCss.h1} data-theme={mode}>About Me</h1>
-          <p className={AboutMeCss.p} data-theme={mode}>Hi, My name is Nouman Khan !!</p>
+          <h1 className={AboutMeCss.h1} data-theme={mode}>
+            About Me
+          </h1>
+          <p className={AboutMeCss.p} data-theme={mode}>
+            Hi, My name is Nouman Khan !!
+          </p>
           <p className={AboutMeCss.p} data-theme={mode}>
             I am a B.Tech 3<sup>rd</sup> year student of DCRUST, Murthal.
             Pursuing my degree in Compter Science and Engineering. I have a keen
