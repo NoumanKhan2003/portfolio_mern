@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect ,useContext } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import NavBarCss from "../Css/NavBar.module.css";
 import { styled } from "@mui/material/styles";
@@ -50,7 +50,6 @@ const NavBar = () => {
     };
   }, []);
   const { mode, changeMode } = useContext(ModeContext);
-
 
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
@@ -123,9 +122,9 @@ const NavBar = () => {
               className={NavBarCss.img}
             />
           </div>
-          <button 
-          data-theme="dark"
-            className="navbar-toggler" 
+          <button
+            data-theme="dark"
+            className="navbar-toggler"
             id={NavBarCss.navTogglerIcon}
             type="button"
             data-bs-toggle="collapse"

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ReactJs",
+    "description": "Used for building dynamic UIs and Single page WebApps.\n Prepared this project with React Library/Framework.",
+    "imgLight": "/Assests/react.png",
+    "imgDark": "/Assests/reactjsDark.png"
+  },
+  {
+    "name": "NodeJs",
+    "description": "Its a Server-side JavaScript with Node.js used for server side technology.",
+    "imgLight": "/Assests/nodejs.png",
+    "imgDark": "/Assests/nodejsDark.png"
+  },
+  {
+    "name": "ExpressJs",
+    "description": "Fast web framework for Node.js.",
+    "imgLight": "/Assests/express.png",
+    "imgDark": "/Assests/expressDark.png"
+  },
+  {
+    "name": "MongoDb",
+    "description": "NoSQL database for modern apps used in MERN Stack.",
+    "imgLight": "/Assests/mongodb.png",
+    "imgDark": "/Assests/mongodbDark.png"
+  },
+  {
+    "name": "JavaScript",
+    "description": "The language of the Client Side technology.",
+    "imgLight": "/Assests/js.png",
+    "imgDark": "/Assests/jsdark.jpg"
+  },
+  {
+    "name": "HTML",
+    "description": "Markup language for structuring web content.",
+    "imgLight": "/Assests/html.jpg",
+    "imgDark": "/Assests/htmlDark.jpg"
+  },
+  {
+    "name": "CSS",
+    "description": "Used for Styling web pages with CSS",
+    "imgLight": "/Assests/css.jpg",
+    "imgDark": "/Assests/cssDark.jpg"
+  },
+  {
+    "name": "BootStrap",
+    "description": "Responsive framework of CSS for web designing.",
+    "imgLight": "/Assests/bootstrap.jpg",
+    "imgDark": "/Assests/bootstrapDark.webp"
+  },
+  {
+    "name": "PHP",
+    "description": "Server-side scripting language used for connecting to server.",
+    "imgLight": "/Assests/php.png",
+    "imgDark": "/Assests/phpDark.webp"
+  },
+  {
+    "name": "MySQL",
+    "description": "Relational database management system used by Php language.",
+    "imgLight": "/Assests/mysql.png",
+    "imgDark": "/Assests/mysqlDark.jpg"
+  },
+  {
+    "name": "C++",
+    "description": "Powerful programming language used for various types of functions.",
+    "imgLight": "/Assests/c++.jpg",
+    "imgDark": "/Assests/cppdark.avif"
+  },
+  {
+    "name": "GitHub",
+    "description": "Used for Version control and collaboration with other rogrammers.",
+    "imgLight": "/Assests/github.png",
+    "imgDark": "/Assests/githubDark.jpg"
+  }
+]

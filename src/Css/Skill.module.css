@@ -11,7 +11,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.imgdivInner[data-theme="dark"] {
+.imgBoxInner[data-theme="dark"] {
   background-color: black;
 }
 .frontHeading[data-theme="dark"] {
@@ -25,10 +25,10 @@
 .backDescribe[data-theme="dark"] {
   color: #eaf0e2;
 }
-.imgDivOuter[data-theme="dark"] {
+.imgBoxOuter[data-theme="dark"] {
   border: 2px solid gold;
 }
-.headingDiv {
+.headingBox {
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
@@ -54,22 +54,22 @@
 .container {
   margin: auto;
 }
-.skilldiv1 {
+.skillBox1 {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
 }
-.skilldiv2 {
+.skillBox2 {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
 }
-.skilldiv3 {
+.skillBox3 {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
 }
-.skilldiv4 {
+.skillBox4 {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
@@ -83,7 +83,7 @@
   padding: 0.2rem 1rem;
   font-size: 2rem;
 }
-.imgDivOuter {
+.imgBoxOuter {
   perspective: 1000px;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -91,7 +91,7 @@
   padding: 1rem;
   border-radius: 1rem;
 }
-.imgdivInner {
+.imgBoxInner {
   margin: auto;
   width: 15rem;
   height: 13rem;
@@ -106,23 +106,23 @@
   position: relative;
 }
 
-.imgdivInner:hover {
+.imgBoxInner:hover {
   /* transform: scale(1.1);  */
   transform: rotateY(180deg);
   cursor: pointer;
 }
-.imgDivFront,
-.imgDivBack {
+.imgBoxFront,
+.imgBoxBack {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.imgDivFront {
+.imgBoxFront {
   text-align: center;
 }
-.imgDivBack {
+.imgBoxBack {
   transform: rotateY(180deg);
 }
 .img {
@@ -152,23 +152,23 @@
       minmax(120px, 1fr)
     ); /* Smaller grid for tablets */
   }
-  .skilldiv1 {
+  .skillBox1 {
     flex-wrap: wrap;
   }
-  .skilldiv2 {
+  .skillBox2 {
     flex-wrap: wrap;
   }
-  .skilldiv3 {
+  .skillBox3 {
     flex-wrap: wrap;
   }
-  .skilldiv4 {
+  .skillBox4 {
     flex-wrap: wrap;
   }
   .heading {
     width: 90%;
     text-decoration: none;
   }
-  .imgdivInner {
+  .imgBoxInner {
     width: 17rem;
     height: 13rem;
   }

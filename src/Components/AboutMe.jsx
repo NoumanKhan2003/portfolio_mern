@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AboutMeCss from "../Css/AboutMe.module.css";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
-import { useContext, useEffect, useState } from "react";
 import { ModeContext } from "./ModeContext";
 import ProgressCircle from "../Components/ProgressCircle";
 import PermContactCalendarOutlinedIcon from "@mui/icons-material/PermContactCalendarOutlined";
 
 const AboutMe = () => {
   const { mode } = useContext(ModeContext);
-  const [loading, setLoading] = useState(true);
-  const [themeChange, setThemeChange] = useState(false);
+  const [status, setStatus] = useState({ loading: true, themeChanging: false });
   const navigate = useNavigate();
 
   const handleContactClick = () => {
@@ -18,18 +16,18 @@ const AboutMe = () => {
   };
 
   useEffect(() => {
-    setLoading(false);
+    setStatus((prev) => ({ ...prev, loading: false }));
   }, []);
 
   useEffect(() => {
-    setThemeChange(true);
+    setStatus((prev) => ({ ...prev, themeChanging: true }));
     const themeTimeout = setTimeout(() => {
-      setThemeChange(false);
+      setStatus((prev) => ({ ...prev, themeChanging: false }));
     }, 400);
     return () => clearTimeout(themeTimeout);
   }, [mode]);
 
-  if (loading || themeChange) {
+  if (status.loading || status.themeChanging) {
     return <ProgressCircle />;
   }
 
@@ -41,6 +39,7 @@ const AboutMe = () => {
             src={require("../Assests/Nouman2.jpg")}
             alt="Nouman Pic"
             className={AboutMeCss.img}
+            loading="lazy"
           />
         </div>
       </div>
