@@ -1,5 +1,5 @@
 .main[data-theme="dark"] {
-  background-image: url("../Assests/abstract-digital-grid-black-background.jpg");
+  background-image: url("../Assets/abstract-digital-grid-black-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -41,7 +41,7 @@
   background-color: rgb(33, 147, 12);
 }
 .main {
-  background-image: url("../Assests/5134341.jpg");
+  background-image: url("../Assets/5134341.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

@@ -34,7 +34,11 @@ const Skills = () => {
               <Box className={SkillsCss.imgBoxInner} data-theme={mode}>
                 <Box className={SkillsCss.imgBoxFront}>
                   <img
-                    src={mode === "dark" ? skill.imgDark : skill.imgLight}
+                    src={
+                      mode === "dark"
+                        ? require(`../Assets/${skill.imgDark}`)
+                        : require(`../Assets/${skill.imgLight}`)
+                    }
                     alt={skill.name}
                     className={SkillsCss.img}
                   />

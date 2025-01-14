@@ -117,7 +117,7 @@ const NavBar = () => {
         <div className={`container-fluid ${NavBarCss["container-fluid"]}`}>
           <div className={NavBarCss.imageLogo}>
             <img
-              src={require("../Assests/logoNouman.png")}
+              src={require("../Assets/logoNouman.png")}
               alt="Nouman"
               className={NavBarCss.img}
             />

@@ -1,5 +1,5 @@
 .container[data-theme="dark"]{
-    background-image: url('../Assests/6193485.jpg');
+    background-image: url('../Assets/6193485.jpg');
     background-repeat: no-repeat;
 }
 .h1[data-theme="dark"]{
@@ -14,7 +14,7 @@
     color: rgb(226, 248, 225);
 }
 .container{
-background-image: url('../Assests/5134341.jpg');
+background-image: url('../Assets/5134341.jpg');
 background-size: cover;
 padding: 1rem;
 }

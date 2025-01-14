@@ -5,8 +5,8 @@ import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import { useContext, useEffect, useState } from "react";
 import { ModeContext } from "../Components/ModeContext";
 import ProgressCircle from "../Components/ProgressCircle";
-import Resume from "../Assests/ResumeNouman.pdf";
-import NoumanImg from "../Assests/noumanimg.jpg";
+import Resume from "../Assets/ResumeNouman.pdf";
+import NoumanImg from "../Assets/noumanimg.jpg";
 const Home = () => {
   const navigate = useNavigate();
   const { mode } = useContext(ModeContext);

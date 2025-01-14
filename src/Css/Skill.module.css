@@ -1,5 +1,5 @@
 .wrapper[data-theme="dark"] {
-  background-image: url("../Assests/5053309.jpg");
+  background-image: url("../Assets/5053309.jpg");
 }
 .heading[data-theme="dark"] {
   background-color: rgba(0, 10, 1, 0.492);
@@ -7,7 +7,7 @@
   border: 1px solid gold;
 }
 .wrapper {
-  background-image: url("../Assests/5134341.jpg");
+  background-image: url("../Assets/5134341.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

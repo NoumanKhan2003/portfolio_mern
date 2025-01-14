@@ -1,5 +1,5 @@
 .container[data-theme="dark"] {
-  background-image: url("../Assests/v748-toon-131.jpg");
+  background-image: url("../Assets/v748-toon-131.jpg");
 }
 .imgDiv[data-theme="dark"] {
   border: 3px solid rgb(232, 211, 97);
@@ -20,7 +20,7 @@
 }
 .container {
   display: flex;
-  background-image: url("../Assests/5575128.jpg");
+  background-image: url("../Assets/5575128.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

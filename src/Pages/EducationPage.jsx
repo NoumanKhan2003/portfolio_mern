@@ -1,7 +1,7 @@
 import EducationCss from "../Css/Education.module.css";
-import collegeImg from "../Assests/Nouman Marksheet.jpg";
-import highSchoolImg from "../Assests/Nouman 12th.jpg";
-import schoolImg from "../Assests/Nouman 10th.jpg";
+import collegeImg from "../Assets/Nouman Marksheet.jpg";
+import highSchoolImg from "../Assets/Nouman 12th.jpg";
+import schoolImg from "../Assets/Nouman 10th.jpg";
 import { Button } from "@mui/material";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import { useContext } from "react";

@@ -8,8 +8,8 @@ import Contact from "./Pages/ContactPage";
 import Error404 from "./Pages/Error404Page";
 import Footer from "./Components/Footer";
 import ProjectShowSection from './Components/ProjectShowSection';
-import careerup from "./Assests/careerup.mp4";
-import portfolio_mern from './Assests/portfolioVideo.mp4'
+import careerup from "./Assets/careerup.mp4";
+import portfolio_mern from './Assets/portfolioVideo.mp4'
 import { ModeProvider } from "./Components/ModeContext";
 function App() {
   return (

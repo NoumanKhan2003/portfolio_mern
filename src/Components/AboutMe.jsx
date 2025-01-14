@@ -36,7 +36,7 @@ const AboutMe = () => {
       <div className={AboutMeCss.left}>
         <div className={AboutMeCss.imgDiv} data-theme={mode}>
           <img
-            src={require("../Assests/Nouman2.jpg")}
+            src={require("../Assets/Nouman2.jpg")}
             alt="Nouman Pic"
             className={AboutMeCss.img}
             loading="lazy"
