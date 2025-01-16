@@ -2,11 +2,11 @@ import HomeCss from "../Css/Home.module.css";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState,useCallback } from "react";
 import { ModeContext } from "../Components/ModeContext";
 import ProgressCircle from "../Components/ProgressCircle";
 import Resume from "../Assets/ResumeNouman.pdf";
-import NoumanImg from "../Assets/noumanimg.jpg";
+import NoumanImg from "../Assets/nouman_image.jpg";
 const Home = () => {
   const navigate = useNavigate();
   const { mode } = useContext(ModeContext);
@@ -19,16 +19,15 @@ const Home = () => {
 
   useEffect(() => {
     setThemeChange(true);
-    const themeTimeout = setTimeout(() => {
+    setTimeout(() => {
       setThemeChange(false);
-    }, 400);
-    return () => clearTimeout(themeTimeout);
+    }, 300);
   }, [mode]);
 
-  const handleAboutClick = () => {
+  const handleAboutClick = useCallback(() => {
     navigate("/about");
     window.scrollTo(0, 0);
-  };
+  }, [navigate]);
 
   if (loading || themeChange) {
     return <ProgressCircle />;
