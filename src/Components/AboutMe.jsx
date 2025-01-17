@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { ModeContext } from "./ModeContext";
 import ProgressCircle from "../Components/ProgressCircle";
 import PermContactCalendarOutlinedIcon from "@mui/icons-material/PermContactCalendarOutlined";
-
+import NoumanImg from "../Assets/nouman_image.jpg"
 const AboutMe = () => {
   const { mode } = useContext(ModeContext);
   const [status, setStatus] = useState({ loading: true, themeChanging: false });
@@ -36,10 +36,9 @@ const AboutMe = () => {
       <div className={AboutMeCss.left}>
         <div className={AboutMeCss.imgDiv} data-theme={mode}>
           <img
-            src={require("../Assets/Nouman2.jpg")}
+            src={NoumanImg}
             alt="Nouman Pic"
             className={AboutMeCss.img}
-            loading="lazy"
           />
         </div>
       </div>

@@ -18,7 +18,7 @@ const Projects = (props) => {
   if (loading) {
     return <ProgressCircle />;
   }
-  
+
   return (
     <div className={ProjectsCss.main} data-theme={mode}>
       <ReactPlayer

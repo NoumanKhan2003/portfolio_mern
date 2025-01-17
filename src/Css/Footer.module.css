@@ -1,8 +1,15 @@
 .container[data-theme="dark"] {
-  background-color: rgb(3, 10, 2);
+  background-image: linear-gradient(
+    to bottom,
+    #000020,
+    #001229,
+    #001d25,
+    #002218,
+    #072600
+  );
 }
-.container:hover[data-theme="dark"]{
-box-shadow: 4px 2px 10px rgb(225, 255, 180);
+.container:hover[data-theme="dark"] {
+  box-shadow: 4px 2px 10px rgb(225, 255, 180);
 }
 .heading[data-theme="dark"] {
   color: rgb(232, 255, 228);
@@ -12,13 +19,18 @@ box-shadow: 4px 2px 10px rgb(225, 255, 180);
 }
 .container {
   width: 100%;
-  background-color: rgba(230, 237, 226, 0.834);
-  box-shadow: 2px 2px 6px rgb(8, 14, 0);
-
+  background: linear-gradient(
+    to right top,
+    #ffffff,
+    #f7feff,
+    #e8ffff,
+    #dffff9,
+    #e8ffe2
+  );
 }
-.container:hover{
+.container:hover {
   box-shadow: 4px 3px 10px rgb(8, 14, 0);
-  }
+}
 .main {
   margin: auto;
   width: 60%;
@@ -44,9 +56,9 @@ box-shadow: 4px 2px 10px rgb(225, 255, 180);
   transform: scale(1.2);
 }
 @media (max-width: 700px) {
- .heading{
-  font-weight: 600;
- }
+  .heading {
+    font-weight: 600;
+  }
   .main {
     width: 90%;
   }

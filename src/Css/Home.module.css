@@ -1,10 +1,11 @@
 .main[data-theme="dark"] {
-  background: rgb(5, 36, 0);
-  background: linear-gradient(
-    153deg,
-    rgba(5, 36, 0, 1) 24%,
-    rgba(1, 82, 56, 1) 50%,
-    rgba(1, 57, 15, 1) 97%
+  background-image: linear-gradient(
+    to top,
+    #000020,
+    #001229,
+    #001d25,
+    #002218,
+    #072600
   );
 }
 .imagediv[data-theme="dark"] {
@@ -27,7 +28,6 @@
 }
 .about[data-theme="dark"] {
   color: rgb(206, 232, 203);
-  transition: ease-in 0.7s;
 }
 .download[data-theme="dark"] {
   background-color: rgb(38, 176, 14);
@@ -46,7 +46,14 @@
   background-color: rgb(33, 147, 12);
 }
 .main {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-image: linear-gradient(
+    to right top,
+    #ccf4ca,
+    #c3faef,
+    #d6fbff,
+    #f1fbff,
+    #ffffff
+  );
   height: 100vh;
   display: flex;
 }
@@ -62,7 +69,7 @@
   margin-top: 2rem;
 }
 .imagediv {
-  width: 19rem;
+  width: 18rem;
   height: 24rem;
   margin: auto;
   object-fit: cover;
@@ -99,7 +106,6 @@
 .about {
   font-size: 1.3rem;
   color: rgb(18, 0, 41);
-  transition: ease-in 0.7s;
 }
 .name2:hover {
   box-shadow: 1px 1px 3px 2px rgb(0, 22, 5);

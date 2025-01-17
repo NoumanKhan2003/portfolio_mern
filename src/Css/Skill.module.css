@@ -1,5 +1,12 @@
 .wrapper[data-theme="dark"] {
-  background-image: url("../Assets/5053309.jpg");
+  background-image: linear-gradient(
+    to right top,
+    #033800,
+    #002e21,
+    #00222c,
+    #001424,
+    #000010
+  );
 }
 .heading[data-theme="dark"] {
   background-color: rgba(0, 10, 1, 0.492);
@@ -7,9 +14,14 @@
   border: 1px solid gold;
 }
 .wrapper {
-  background-image: url("../Assets/5134341.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to right bottom,
+    #ccf4ca,
+    #c3faef,
+    #d6fbff,
+    #f1fbff,
+    #ffffff
+  );
 }
 .imgBoxInner[data-theme="dark"] {
   background-color: black;

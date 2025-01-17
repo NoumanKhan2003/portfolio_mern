@@ -1,8 +1,22 @@
 .main[data-theme="dark"] {
-  background-color: black;
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #090004,
+    #0d000d,
+    #0b0016,
+    #01021d
+  );
 }
 .main {
-  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    to right bottom,
+    #ffffff,
+    #fafeff,
+    #effeff,
+    #e4ffff,
+    #e1fff2
+  );
 }
 .techitem[data-theme="dark"] {
   color: #ffffff;
