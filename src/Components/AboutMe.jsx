@@ -35,7 +35,7 @@ const AboutMe = () => {
     <div className={AboutMeCss.container} data-theme={mode}>
       <div className={AboutMeCss.left}>
         <div className={AboutMeCss.imgDiv} data-theme={mode}>
-          <img
+          <img data-theme={mode}
             src={NoumanImg}
             alt="Nouman Pic"
             className={AboutMeCss.img}

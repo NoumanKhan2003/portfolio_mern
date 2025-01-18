@@ -7,14 +7,6 @@ import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined
 import { useContext } from "react";
 import { ModeContext } from "../Components/ModeContext";
 const Education = () => {
-  const handleDownload = (fileUrl, fileName) => {
-    const link = document.createElement("a");
-    link.href = fileUrl;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const { mode } = useContext(ModeContext);
   return (
@@ -38,11 +30,9 @@ const Education = () => {
           </p>
           <Button
             variant="contained"
-            color={mode==="dark" ? "success" : "primary"}
+            color={mode === "dark" ? "success" : "primary"}
             startIcon={<CloudDownloadOutlinedIcon />}
-            onClick={() =>
-              handleDownload(collegeImg, "Nouman University Marksheet")
-            }
+            href={collegeImg}
             data-theme={mode}
           >
             Download
@@ -60,11 +50,9 @@ const Education = () => {
           </p>
           <Button
             variant="contained"
-            color={mode==="dark" ? "success" : "primary"}
+            color={mode === "dark" ? "success" : "primary"}
             startIcon={<CloudDownloadOutlinedIcon />}
-            onClick={() =>
-              handleDownload(highSchoolImg, "Nouman 12th Marksheet")
-            }
+            href={highSchoolImg}
             data-theme={mode}
           >
             Download
@@ -82,9 +70,9 @@ const Education = () => {
           </p>
           <Button
             variant="contained"
-            color={mode==="dark" ? "success" : "primary"}
+            color={mode === "dark" ? "success" : "primary"}
             startIcon={<CloudDownloadOutlinedIcon />}
-            onClick={() => handleDownload(schoolImg, "Nouman 10th Marksheet")}
+            href={schoolImg}
             data-theme={mode}
           >
             Download

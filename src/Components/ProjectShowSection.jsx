@@ -69,7 +69,7 @@ const Projects = (props) => {
           </Typography>
           <Box>
             <Box>
-              <Typography variant="h5">
+              <Typography variant="h5" paddingBottom="7rem">
                 <ul className={ProjectsCss.techlist}>
                   {props.tech.map((technology, index) => (
                     <li
