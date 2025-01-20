@@ -1,10 +1,10 @@
 import HomeCss from "../Css/Home.module.css";
-import { Button } from "@mui/material";
+import { Button, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import { useContext, useEffect, useState, useCallback } from "react";
 import { ModeContext } from "../Components/ModeContext";
-import ProgressCircle from "../Components/ProgressCircle";
+import HomeSkeleton from "../Components/HomeSkeleton";
 import Resume from "../Assets/ResumeNouman.pdf";
 import NoumanImg from "../Assets/Nouman2.jpg";
 
@@ -12,10 +12,12 @@ const Home = () => {
   const navigate = useNavigate();
   const { mode } = useContext(ModeContext);
   const [loading, setLoading] = useState(true);
-  const [themeChange, setThemeChange] = useState(false);
 
   useEffect(() => {
-    setLoading(false);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleAboutClick = useCallback(() => {
@@ -24,12 +26,12 @@ const Home = () => {
   }, [navigate]);
 
   if (loading) {
-    return <ProgressCircle />;
+    return <HomeSkeleton />;
   }
 
   return (
-    <div className={HomeCss.main} data-theme={mode}>
-      <div className={HomeCss.left}>
+    <Box className={HomeCss.main} data-theme={mode}>
+      <Box className={HomeCss.left}>
         <h1 className={HomeCss.name1} data-theme={mode}>
           Hey, I'M{" "}
         </h1>
@@ -46,7 +48,7 @@ const Home = () => {
           MERN Stack. Currently exploring the world of web development through
           personal projects.
         </p>
-        <div className={HomeCss.buttonDiv}>
+        <Box className={HomeCss.buttonDiv}>
           <Button
             className={HomeCss.download}
             variant="contained"
@@ -58,17 +60,17 @@ const Home = () => {
           >
             Download CV
           </Button>
-        </div>
-      </div>
-      <div className={HomeCss.right}>
-        <div className={HomeCss.imagediv} data-theme={mode}>
+        </Box>
+      </Box>
+      <Box className={HomeCss.right}>
+        <Box className={HomeCss.imagediv} data-theme={mode}>
           <img
             src={NoumanImg}
             alt="Nouman Pic"
             onClick={handleAboutClick}
             data-theme={mode}
           />
-        </div>
+        </Box>
         <Button
           className={HomeCss.download2}
           variant="contained"
@@ -80,8 +82,8 @@ const Home = () => {
         >
           Download CV
         </Button>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
