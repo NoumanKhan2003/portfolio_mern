@@ -44,8 +44,9 @@
 
 .left {
   width: 50%;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .imgDiv {
   margin: auto;

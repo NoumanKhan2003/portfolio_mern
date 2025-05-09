@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { ModeContext } from "./ModeContext";
 import ProgressCircle from "../Components/ProgressCircle";
 import PermContactCalendarOutlinedIcon from "@mui/icons-material/PermContactCalendarOutlined";
-import NoumanImg from "../Assets/nouman_image.jpg"
+import NoumanImg from "../Assets/Nouman2.jpg"
 const AboutMe = () => {
   const { mode } = useContext(ModeContext);
   const [status, setStatus] = useState({ loading: true, themeChanging: false });
